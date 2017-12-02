@@ -13,6 +13,7 @@ function [ y, observers, param ] = sdo( data, param )
 %       x, closest observers
 %       sd, random seed
 %       hbs, histogram-based selection of observers flag
+%       ynorm.c, constant for score amplification
 %
 % Outputs:
 %   y, outlierness score
@@ -21,6 +22,9 @@ function [ y, observers, param ] = sdo( data, param )
 %       m, number of samples
 %       n, number of dimensions
 %       kp, number of active observers
+%       ynorm.ave, mean of scores
+%       ynorm.std, standar deviation of scores
+%       ynorm.min, minimun score
 
     [m,n]=size(data);
     if exist('param')==0, param=[];end
@@ -53,7 +57,7 @@ function [ y, observers, param ] = sdo( data, param )
 
     % if histogram-based sampling is desired
     if (hbs)     
-        dataLC=hbsampling(data);
+        dataLC=hbdiscret(data);
         [mLC,n]=size(dataLC); 
         k=min(mLC,k);
     else
@@ -92,7 +96,7 @@ function [ y, observers, param ] = sdo( data, param )
     [kp,n]=size(observers); 
     param.kp=kp;
     
-    % ------------- TESTING ------------
+    % ------------- APPLICATION ------------
     for i=1:m
         a=data(i,:);
         distB=dist(a,observers');
@@ -101,7 +105,12 @@ function [ y, observers, param ] = sdo( data, param )
         BX=observers(indB(1:xb),:);
         y(i)=median(dist(a,BX'));
     end
-    y=2*zscore(y);
-    y=y-min(y); 
+    yc=2;
+    param.ynorm.ave=mean(y);
+    param.ynorm.std=std(y);
+    param.ynorm.c=yc;
+    y=yc*zscore(y);
+    param.ynorm.min=min(y);
+    y=y-min(y);
 end
     
