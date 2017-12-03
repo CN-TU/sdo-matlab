@@ -1,4 +1,4 @@
-function [ dataLC ] = hbdiscret( data )
+function [ dataLC ] = hbdiscret( data, k )
 % HBDISCRET discretizes a dataset based on histograms
 % FIV (TU Wien), Nov 2017
 %
@@ -8,6 +8,7 @@ function [ dataLC ] = hbdiscret( data )
 % Outputs:
 %  dataLC, discretized dataset
 
+    [m,n]=size(data);
 	binning_param=20;
 	for i=1:n
             D=data(:,i);
@@ -16,5 +17,4 @@ function [ dataLC ] = hbdiscret( data )
             X(:,i) = discretize(D,edges,values);
         end
         dataLC=unique(X,'rows');
-	return dataLC;
 end
