@@ -57,7 +57,7 @@ function [ y, observers, param ] = sdo( data, param )
 
     % if histogram-based sampling is desired
     if (hbs)     
-        dataLC=hbdiscret(data);
+        dataLC=hbdiscret(data,k);
         [mLC,n]=size(dataLC); 
         k=min(mLC,k);
     else
