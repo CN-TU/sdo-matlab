@@ -1,4 +1,4 @@
-# sdo-matlab, 
+# sdo-matlab
 *FIV Dec 2017*
 
 SDO (Sparse Data Observers): outlier detection based on low density models
