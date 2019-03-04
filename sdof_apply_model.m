@@ -28,7 +28,7 @@ function [ y ] = sdof_apply_model( data, observers, x, ynorm )
     % ------------- APPLICATION ------------
     distB=dist(data,observers');
     [val indB]=sort(distB');
-    a=median(val(1:x,:));
+    y=median(val(1:x,:));
     a=ynorm.c*(y-ynorm.ave)/ynorm.std-ynorm.min;
 end
     

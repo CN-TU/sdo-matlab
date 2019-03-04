@@ -31,7 +31,7 @@ function [ y, observers, param ] = sdof( data, param )
         % Caclulation of 'k' if not defined
         % 'k' is established based on sample size for finite populations using the 
         % variance of PCA most important parameter
-        [c_pca,s_pca] = princomp(data);
+        [c_pca,s_pca] = pca(data);
         sigma = std(s_pca(:,1));
         if sigma<1,sigma=1;end
         error = 0.1*std(s_pca(:,1));
@@ -79,7 +79,7 @@ function [ y, observers, param ] = sdof( data, param )
     if isfield(param,'qv')==0, param.qv=0.3; end % 'qv=0.3' by default
     if isfield(param,'q')==0, 
         % if 'q' is not defined, 'q' is calculated based on 'qv'
-        param.q = floor(quantile(actM,param.qv));
+        param.q = quantile(actM,param.qv)+1;
     end
     q=param.q;
 

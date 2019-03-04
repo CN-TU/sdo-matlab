@@ -89,7 +89,7 @@ function [ y, observers, param ] = sdos( data, param )
     if isfield(param,'qv')==0, param.qv=0.3; end % 'qv=0.3' by default
     if isfield(param,'q')==0, 
         % if 'q' is not defined, 'q' is calculated based on 'qv'
-        param.q = floor(quantile(actM,param.qv));
+        param.q = quantile(actM,param.qv)+1;
     end
     q=param.q;
 
