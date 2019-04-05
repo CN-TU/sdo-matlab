@@ -14,17 +14,17 @@ large amounts of data in a continuos manner. SDO is a machine learning solution 
 stream data applications.
 
 **Included files:**
-- "sdos.m" analyzes an input dataset and outputs oulierness scores (safe version, with "for loops").
+- "sdos.m" analyzes an input dataset and outputs oulierness scores (safe version, time demanding, with "for loops").
 
-- "sdof.m" analyzes an input dataset and outputs oulierness scores (fast version, vectorized).
+- "sdof.m" analyzes an input dataset and outputs oulierness scores (fast version, vectorized, memory demanding).
 
 - "sdos_apply_model.m" applies a model obtained with "sdo.m" on new samples not used for training the model (safe version).
 
 - "sdof_apply_model.m" applies a model obtained with "sdo.m" on new samples not used for training the model (fast version).
 
-- "sample_size.m" calculates the number of samples to match the mean for a case of finite population (optionally used by "sdo.m").
+- "sample_size.m" calculates the number of samples to match the mean for a case of finite population (optional).
 
-- "hbdiscret.m" discretizes a dataset based on histograms (optionally used by "sdo.m")
+- "hbdiscret.m" discretizes a dataset based on histograms (optional).
 
 For more information, experiments and datasets, please go to:
 https://www.cn.tuwien.ac.at/data-analysis/outliers-sdo/
