@@ -1,8 +1,9 @@
 function [ y, observers, param ] = sdof( data, param )
 % SDO (Sparse Data Observers) algorithm 
 % SDO performs outlier detection based on the creation of a low density
-% model of the data (fast version)
-% FIV (TU Wien), May 2018 (created)
+% model of the data (fast version - memory demanding)
+% Created:      May 2018 FIV (TU Wien)
+% Last update:  Apr 2019 FIV (TU Wien)
 %   
 % Inputs:
 %   data, training dataset

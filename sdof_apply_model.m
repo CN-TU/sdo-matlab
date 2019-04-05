@@ -1,7 +1,8 @@
 function [ y ] = sdof_apply_model( data, observers, x, ynorm )
 % SDOF_APPLY_MODEL uses a model (set of observers) to calculate 
-% outlierness scores in new data (fast version)
-% FIV (TU Wien), May 2018 (created)
+% outlierness scores in new data (fast version - memory demanding)
+% Created:      May 2018 FIV (TU Wien)
+% Last update:  Apr 2019 FIV (TU Wien)
 %   
 % Inputs:
 %   data, training dataset

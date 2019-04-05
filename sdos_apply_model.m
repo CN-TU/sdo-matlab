@@ -1,8 +1,8 @@
 function [ y ] = sdos_apply_model( data, observers, x, ynorm )
 % SDOS_APPLY_MODEL uses a model (set of observers) to calculate 
-% outlierness scores in new data (safe version)
-% FIV (TU Wien), Dec 2017 (created)
-% FIV (TU Wien), May 2018 (last modified)
+% outlierness scores in new data (safe version - time demanding)
+% Created:      Dec 2017 FIV (TU Wien)
+% Last update:  Apr 2019 FIV (TU Wien)
 %   
 % Inputs:
 %   data, training dataset
