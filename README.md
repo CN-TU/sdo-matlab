@@ -28,7 +28,9 @@ stream data applications.
 
 ## Reference
 
-F. Iglesias, T. Zseby, A. Zimek. *Outlier Detection Based on Low Density Models*. Workshop on Data Science and Big Data Analytics (DSBDA), IEEE International Conference on Data Mining (ICDM), Singapore; 11-17-2018 – 11-20-2018. IEEE Computer Society Press, 2018. 
+Please, if you use SDO cite the following paper:
+
+> F. Iglesias, T. Zseby, A. Zimek. *Outlier Detection Based on Low Density Models*. Workshop on Data Science and Big Data Analytics (DSBDA), IEEE International Conference on Data Mining (ICDM), Singapore; 11-17-2018 – 11-20-2018. IEEE Computer Society Press, 2018. 
 
 For more information, experiments and datasets, please go to:
 https://www.cn.tuwien.ac.at/data-analysis/outliers-sdo/
