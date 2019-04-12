@@ -1,5 +1,8 @@
 # sdo-matlab
-*FIV Dec 2017*
+
+*Created: Dec 2017, FIV*
+
+*Last update: Apr 2019, FIV*
 
 SDO (Sparse Data Observers): outlier detection based on low density models
 
@@ -14,6 +17,7 @@ large amounts of data in a continuos manner. SDO is a machine learning solution 
 stream data applications.
 
 ## Included files
+
 - "sdos.m" analyzes an input dataset and outputs oulierness scores (safe version, time demanding, with "for loops").
 
 - "sdof.m" analyzes an input dataset and outputs oulierness scores (fast version, vectorized, memory demanding).
@@ -25,6 +29,15 @@ stream data applications.
 - "sample_size.m" calculates the number of samples to match the mean for a case of finite population (optional).
 
 - "hbdiscret.m" discretizes a dataset based on histograms (optional).
+
+- "example.m" shows SDO performance with a simple 2-dimensional dataset.
+
+- "exampledata.mat" 2-dimensional toy dataset.
+
+## How to start
+
+For a simple example, open MATLAB and, from the command line (working directory), run:
+> example
 
 ## Reference
 
