@@ -13,7 +13,7 @@ SDO is devised to be embedded in systems or frameworks that operate autonomously
 large amounts of data in a continuos manner. SDO is a machine learning solution for Big Data and 
 stream data applications.
 
-**Included files:**
+## Included files
 - "sdos.m" analyzes an input dataset and outputs oulierness scores (safe version, time demanding, with "for loops").
 
 - "sdof.m" analyzes an input dataset and outputs oulierness scores (fast version, vectorized, memory demanding).
@@ -25,6 +25,10 @@ stream data applications.
 - "sample_size.m" calculates the number of samples to match the mean for a case of finite population (optional).
 
 - "hbdiscret.m" discretizes a dataset based on histograms (optional).
+
+## Reference
+
+F. Iglesias, T. Zseby, A. Zimek. *Outlier Detection Based on Low Density Models*. Workshop on Data Science and Big Data Analytics (DSBDA), IEEE International Conference on Data Mining (ICDM), Singapore; 11-17-2018 – 11-20-2018. IEEE Computer Society Press, 2018. 
 
 For more information, experiments and datasets, please go to:
 https://www.cn.tuwien.ac.at/data-analysis/outliers-sdo/
