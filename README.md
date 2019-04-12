@@ -26,17 +26,17 @@ stream data applications.
 
 - "sdof_apply_model.m" applies a model obtained with "sdo.m" on new samples not used for training the model (fast version).
 
-- "sample_size.m" calculates the number of samples to match the mean for a case of finite population (optional).
+- "sample_size.m" calculates the number of samples to match the mean for a case of finite population. Rule of thumb calculation for the number of observers parameter (optional).
 
-- "hbdiscret.m" discretizes a dataset based on histograms (optional).
+- "hbdiscret.m" discretizes a dataset based on histograms. Provided to place observers in a normalized grid (optional).
 
 - "example.m" shows SDO performance with a simple 2-dimensional dataset.
 
-- "exampledata.mat" 2-dimensional toy dataset.
+- "exampledata.mat" is 2-dimensional toy example dataset.
 
 ## How to start
 
-For a simple example, open MATLAB and, from the command line (working directory), run:
+To see SDO working on a arbitrary dataset, open MATLAB in the working directory and, from the command line, type:
 > example
 
 ## Reference
